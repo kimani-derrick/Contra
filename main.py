@@ -81,7 +81,7 @@ class Game:
                 self.player=Player(
                     (obj.x,obj.y),
                     [self.all_sprites,self.vulnerable_sprites],
-                    'graphics\\player',
+                    'graphics/player',
                     self.collision_sprites,
                     self.shoot
                 )
@@ -89,7 +89,7 @@ class Game:
                 Enemy(
                     (obj.x,obj.y),
                     [self.all_sprites,self.vulnerable_sprites],
-                    'graphics\\enemies'
+                    'graphics/enemies'
                     ,self.shoot,self.player,
                     self.collision_sprites
                 )

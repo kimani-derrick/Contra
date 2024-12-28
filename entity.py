@@ -54,6 +54,9 @@ class Entity(pygame.sprite.Sprite):
                     file_path=os.path.join(folder_path,file)
                     surface=pygame.image.load(file_path).convert_alpha()
                     self.animations[folder].append(surface)
+        # Set initial status to the first available animation
+        if self.animations:
+            self.status = next(iter(self.animations.keys()))
     
     def blink(self):
         if not self.is_vulnerable:
